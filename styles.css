@@ -104,10 +104,11 @@ body {
 nav {
   position: fixed;
   display: flex;
+  height: 60px;
   align-items: center;
   justify-content: space-evenly;
   background: var(--primary-color);
-  padding: 20px 30px;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -404,7 +405,6 @@ nav {
 .banner__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4rem 0;
 }
 
 .banner__card {
@@ -469,9 +469,10 @@ nav {
 }
 
 .client__card img {
-  max-width: 100px;
+  width: 100px;
+  height: 100px;
   margin-inline: auto;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .blog__container .section__header::before {
@@ -481,6 +482,7 @@ nav {
 .blog__grid {
   margin-top: 4rem;
   display: grid;
+  grid-template-columns: repeat(3,1fr);
   gap: 1rem;
 }
 
@@ -543,11 +545,6 @@ nav {
   text-align: center;
 }
 
-.footer__grid {
-  display: grid;
-  gap: 4rem 2rem;
-}
-
 .footer__content h4 {
   margin-bottom: 1rem;
   font-size: 1.2rem;
@@ -563,6 +560,8 @@ nav {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-right: 10px;
+  white-space: nowrap;
 }
 
 .footer__socials a {
@@ -625,6 +624,12 @@ nav {
   }
 }
 @media screen and (max-width: 540px) {
+  .banner__container {
+    grid-template-columns: 100vw;
+  }
+  .banner__card:nth-child(2n - 1) {
+    border: none;
+  }
   .about__container{
     grid-template-columns: 100vw;
   }
