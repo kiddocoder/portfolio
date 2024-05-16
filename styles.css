@@ -647,6 +647,9 @@ nav {
 }
 
 @media (width > 540px) {
+  .header{
+    margin-top: 35px;
+  }
   .panel__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -657,9 +660,6 @@ nav {
 }
 
 @media (width > 768px) {
-  .header{
-    margin-top: 25px;
-  }
   nav {
     position: static;
     padding: 15px 18px;
