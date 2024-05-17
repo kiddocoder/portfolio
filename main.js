@@ -1,11 +1,14 @@
 
 const scrollRevealOption = {
-  distance: "50px",
+  distance: "20px",
   origin: "bottom",
-  duration: 1000,
+  duration: 500,
 };
 
 ScrollReveal().reveal(".header__container h4", {
+  ...scrollRevealOption,
+});
+ScrollReveal().reveal(".section__header", {
   ...scrollRevealOption,
 });
 ScrollReveal().reveal(".header__container h1", {
@@ -18,9 +21,12 @@ ScrollReveal().reveal(".header__container .section__description", {
 });
 ScrollReveal().reveal(".header__container", {
   ...scrollRevealOption,
-  delay: 1500,
+  delay: 1000,
 });
-
+ScrollReveal().reveal(".panel__grid", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
 const progressBar = document.querySelectorAll(".about__progressbar");
 
 Array.from(progressBar).forEach((bar) => {
@@ -36,7 +42,7 @@ ScrollReveal().reveal(".about__content h4", {
   ...scrollRevealOption,
   delay: 500,
 });
-ScrollReveal().reveal(".about__content .section__description", {
+ScrollReveal().reveal(".section__description", {
   ...scrollRevealOption,
   delay: 1000,
 });
@@ -79,12 +85,25 @@ tabList.addEventListener("click", (e) => {
     { once: true }
   );
 });
-
-const swiper = new Swiper(".swiper", {
-  slidesPerView: "auto",
-  spaceBetween: 30,
+var swiperOptions = {
   loop: true,
-});
+  freeMode: true,
+  spaceBetween: 30,
+  grabCursor: true,
+  slidesPerView: 'auto',
+  autoplayDisableOnInteraction: false,
+  loop: true,
+  autoplay: {
+    enabled: true,
+    delay: 2,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: false,
+  },
+  freeMode: true,
+  speed: 2500,
+  freeModeMomentum: false
+};
+const swiper = new Swiper(".swiper", swiperOptions);
 
 ScrollReveal().reveal(".blog__card", {
   ...scrollRevealOption,
