@@ -437,7 +437,7 @@ nav {
 .client__card img {
   width: 120px;
   height: 120px;
-  margin-inline: auto;
+  margin: auto;
   border-radius: 50%;
 }
 
