@@ -549,9 +549,7 @@ nav {
   align-items: center;
   transition: 0.3s;
 }
-.blog__socials .ri-facebook-fill,.ri-twitter-x-fill,.ri-linkedin-fill{
-  color: rgb(49, 49, 249); 
-}
+
 .footer__socials a:hover {
   color: var(--primary-color);
 }
